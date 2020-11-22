@@ -1,7 +1,7 @@
 package web.homework3.demo.entities;
 
 public class Person {
-
+    private int ID = 0;
     private String name = "";
     private String tele = "";
     private String post = "";
@@ -9,7 +9,8 @@ public class Person {
     private String qq = "";
 
     public Person(){}
-    public Person(String name, String tele, String post, String addr, String qq){
+    public Person(int id, String name, String tele, String post, String addr, String qq){
+        this.ID = id;
         this.name = name;
         this.tele = tele;
         this.post = post;
@@ -50,5 +51,12 @@ public class Person {
     }
     public void setTele(String tele) {
         this.tele = tele;
+    }
+
+    public int getID() {
+        return ID;
+    }
+    public void setID(int ID) {
+        this.ID = ID;
     }
 }

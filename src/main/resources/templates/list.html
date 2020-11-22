@@ -18,13 +18,14 @@
             <th>QQ：</th>
         </tr>
         <tr th:each="person:${personList}">
+            <td th:text="${personStat.count}"></td>
             <td th:text="${person.getName()}"></td>
             <td th:text="${person.getTele()}">18813082756</td>
             <td th:text="${person.getPost()}">1651234118@qq.com</td>
             <td th:text="${person.getAddr()}">xtc</td>
             <td th:text="${person.getQq()}">1651234118</td>
-            <td><a href="change.html" th:href="@{/change(id = ${person.getName()})}" >编辑</a></td>
-            <td><a href="change.html" th:href="@{/list(delid = ${person.getID()})}">删除</a></td>
+            <td><a href="change.html" th:href="@{/change(id = ${personStat.count})}">编辑</a></td>
+            <td><a href="change.html" th:href="@{/del(id = ${personStat.count})}">删除</a></td>
         </tr>
     </table>
     <a href="add.html" th:href="@{/add}" methods="post">添加联系人</a>

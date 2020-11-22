@@ -1,16 +1,15 @@
 package web.homework3.demo.entities;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class User {
     private String user = "";
     private String password = "";
-    private final HashMap<String,Person> personMap;
+    private ArrayList<Person> personList;
     public User(String user, String password){
         this.user = user;
         this.password = password;
-        this.personMap = new HashMap<>();
+        this.personList = new ArrayList<>();
     }
 
     public String getPassword() {
@@ -27,7 +26,7 @@ public class User {
         this.user = user;
     }
 
-    public HashMap<String,Person> getPersonMap() {
-        return personMap;
+    public ArrayList<Person> getPersonList() {
+        return personList;
     }
 }
