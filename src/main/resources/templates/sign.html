@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <link rel="stylesheet" href="../static/css/login.css" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="container">
+    <div><p th:align="center" th:text="${result}"/></div>
+    <h2>通讯录注册界面</h2>
+    <form action="sign.html" th:action="@{/sign}" method="post">
+        <div class="inputBOX">
+            <input name="user" id="user" type="text" placeholder="用户名">
+        </div>
+        <div class="inputBOX">
+            <input name="password" id="password" type="text" placeholder="密码">
+        </div>
+        <input type="submit" id="sign" value="注册">
+        <p>
+            <a href="login.html" th:href="@{/}">返回主页</a>
+        </p>
+
+    </form>
+</div>
+</body>
+</html>

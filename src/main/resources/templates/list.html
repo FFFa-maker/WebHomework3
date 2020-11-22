@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>通讯录列表</title>
+    <link rel="stylesheet" href="../static/css/list.css" th:href="@{/css/list.css}">
+</head>
+<body>
+<h3>通讯录</h3>
+<div class="container">
+    <table id="list">
+        <tr>
+            <th>编号：</th>
+            <th>姓名：</th>
+            <th>电话：</th>
+            <th>邮箱：</th>
+            <th>住址：</th>
+            <th>QQ：</th>
+        </tr>
+        <tr th:each="person:${personList}">
+            <td th:text="${person.getName()}"></td>
+            <td th:text="${person.getTele()}">18813082756</td>
+            <td th:text="${person.getPost()}">1651234118@qq.com</td>
+            <td th:text="${person.getAddr()}">xtc</td>
+            <td th:text="${person.getQq()}">1651234118</td>
+            <td><a href="change.html" th:href="@{/change(id = ${person.getName()})}" >编辑</a></td>
+            <td><a href="change.html" th:href="@{/list(delid = ${person.getID()})}">删除</a></td>
+        </tr>
+    </table>
+    <a href="add.html" th:href="@{/add}" methods="post">添加联系人</a>
+</div>
+</body>
+</html>
