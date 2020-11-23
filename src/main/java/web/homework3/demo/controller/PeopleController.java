@@ -64,7 +64,7 @@ public class PeopleController {
         return new ModelAndView("/change").addObject("id", id);
     }
 
-    @GetMapping("del")
+    @GetMapping("/del")
     ModelAndView getDel(int id, @SessionAttribute User user){
         user.getPersonList().remove(id-1);
         return new ModelAndView("redirect:/list");

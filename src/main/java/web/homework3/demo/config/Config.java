@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class Config implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-        String[] urls = {"/list", "/add", "/change"};
+        String[] urls = {"/list", "/add", "/change","/del"};
         registry.addInterceptor(new Interceptor()).addPathPatterns(Arrays.asList(urls));
     }
 }
