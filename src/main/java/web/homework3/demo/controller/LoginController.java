@@ -16,7 +16,6 @@ public class LoginController {
     static HashMap<String, User> userMap = new HashMap<>();
     static{
         userMap.put("root", new User("root", "root"));
-        userMap.get("root").getPersonList().add(new Person(1,"1","1","1","1","1"));
     }
 
     @GetMapping("/")

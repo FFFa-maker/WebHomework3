@@ -24,8 +24,8 @@
             <td th:text="${person.getPost()}">1651234118@qq.com</td>
             <td th:text="${person.getAddr()}">xtc</td>
             <td th:text="${person.getQq()}">1651234118</td>
-            <td><a href="change.html" th:href="@{/change(id = ${personStat.count})}">编辑</a></td>
-            <td><a href="list.html" th:href="@{/del(id = ${personStat.count})}">删除</a></td>
+            <td><a href="change.html" th:href="@{/change(id = ${person.getID()})}">编辑</a></td>
+            <td><a href="list.html" th:href="@{/del(id = ${person.getID()})}">删除</a></td>
         </tr>
     </table>
     <a href="add.html" th:href="@{/add}" methods="post">添加联系人</a>

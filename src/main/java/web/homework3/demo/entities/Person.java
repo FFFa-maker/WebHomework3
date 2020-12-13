@@ -1,7 +1,17 @@
 package web.homework3.demo.entities;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Person {
-    private int ID = 0;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long ID;
     private String name = "";
     private String tele = "";
     private String post = "";
@@ -9,8 +19,7 @@ public class Person {
     private String qq = "";
 
     public Person(){}
-    public Person(int id, String name, String tele, String post, String addr, String qq){
-        this.ID = id;
+    public Person(String name, String tele, String post, String addr, String qq){
         this.name = name;
         this.tele = tele;
         this.post = post;
@@ -53,10 +62,7 @@ public class Person {
         this.tele = tele;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
-    }
-    public void setID(int ID) {
-        this.ID = ID;
     }
 }
